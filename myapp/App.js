@@ -17,6 +17,9 @@ import {
   useColorScheme,
   View,
   Image,
+  Button,
+  TouchableOpacity,
+  Alert
 } from 'react-native';
 
 import {
@@ -86,6 +89,17 @@ const App: () => Node = () => {
             ]}>
             공유 일기장에 오신 것을 환영합니다.
             </Text>
+          <Button
+            style={ styles.button }
+            title="가입하기"
+            onPress={() => Alert.alert('Simple [Button] pressed')}
+          />
+          <TouchableOpacity
+            style={styles.loginScreenButton}
+            onPress={() => Alert.alert('Simple [TouchableOpacity] pressed')}
+            underlayColor='#fff'>
+              <Text style={styles.loginText}>가입하기</Text>
+          </TouchableOpacity>
         </View>
     </SafeAreaView>
   );
@@ -119,6 +133,23 @@ const styles = StyleSheet.create({
     width: 66,
     height: 58,
   },
+  loginScreenButton:{
+    marginRight:40,
+    marginLeft:40,
+    marginTop:86,
+    paddingTop:10,
+    paddingBottom:10,
+    backgroundColor:'#1E6738',
+    borderRadius:10,
+    borderWidth: 1,
+    borderColor: '#fff'
+  },
+  loginText:{
+      color:'#fff',
+      textAlign:'center',
+      paddingLeft : 10,
+      paddingRight : 10
+  }
 });
 
 export default App;

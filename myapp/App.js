@@ -66,15 +66,26 @@ const App: () => Node = () => {
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            justifyContent: 'center',
+            alignItems: 'center'
           }}>
-          <View
-            style={ { justifyContent: 'center',
-              alignItems: 'center' }} >
+          <View>
           <Image
             style={ { marginTop: 83, width: 254, height: 254 } }
             source={require('./Images/Ellipse3.png')}
           />
           </View>
+
+          <Text
+          style={[
+            styles.sectionDescription,
+            {
+              marginTop: 62, 
+              color: isDarkMode ? Colors.light : Colors.dark,
+            },
+            ]}>
+            공유 일기장에 오신 것을 환영합니다.
+            </Text>
         </View>
     </SafeAreaView>
   );
